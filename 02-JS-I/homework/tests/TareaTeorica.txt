@@ -1,0 +1,8 @@
+   Variables === una variable es un contenedor para un valor! Ese valor puede ser cualquier cosa (un string, una funcion, un booleano, un numero, etc).
+    String === un string es una cadena de texto. Siempre va entre comillas y puede ser letras, espacios, numeros, etc.
+    Funciones === una funcion es un conjunto de instrucciones que realiza una tarea determinada. Toma una entrada, que es el argumento y da como resultado una salida.
+Para definir una funcion hay que escribir function "nombre de la funcion" (parametros o argumentos) { codigo de la funcion que va a determinar su tarea}.
+Cuando usamos return la funcion se detiene y pasa se pasa a la siguiente linea de codigo.
+    If === es un comando que se utiliza para ejecutar  una sentencia cuando una condicion especifica es correcta o verdadera (true). Se puede o no acompanar de otros
+comandos como por ejemplo el if else o  else.
+Valores Booleanos === son valores que adoptan unicamente 2 estados (true or false). 

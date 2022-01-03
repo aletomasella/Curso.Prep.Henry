@@ -1,0 +1,6 @@
+for === es un comando que ejecuta un bucle hasta que cierta condicion determinada se cumple y en ese momento se detiene
+se escribe for (var "x" = "numero"; x < o > que un "numero"; x++) {sentencia o que va a hacer el bucle for}
+                exprecion inicial    condicion              expr. final
+&& === AND o Y sirve para agregar una condicion booleana
+|| === OR o O sirve para agregar una condicion booleana
+! === change o cambio y sirve para indicar todo lo contrario a lo que estamos pidiendo. Por ejemplo si algo antes era true si colocamos ese signo primero ahora sera false.
