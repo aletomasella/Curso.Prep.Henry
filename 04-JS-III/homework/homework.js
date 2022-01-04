@@ -110,16 +110,17 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
-  
+  let total = 1
   if(arguments.length === 0) {
-    return 0;}
-    if (arguments.length === 1) {
-      return arguments;
-    } 
-    else {for (var i = 0; i < arguments.length - 1; i++) {
-arguments[i] * arguments [i + 1];}
+    return 0;
+  } if (arguments === arguments[0] ) {
+    return arguments;
+  } else{ 
+    for (var i = 0; i < arguments.length; i++)
+  {total = (arguments[i] * total)
   }
-  return arguments
+  return total
+  }
 }
 
 
@@ -175,17 +176,31 @@ function mesesDelAño(array) {
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
   //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
   // Tu código:
-  var array2 = []
-  if (array !== "Enero" && array !== "Marzo" && array !== "Noviembre") {
-    return "No se encontraron los meses pedidos";
-  } else {
-      for (i = 0; i < array.length; i++) {
-        
-      }
+  var array2 = [];
+  var EnerOk = false;
+  var MarzOk = false;
+  var NovOk = false;
+  var j = 0;
+  for (i = 0; i < array.length; i++){
+    if (array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre")
+  {array2[j] = array[i];
+  if (array2[j] === "Enero") {
+    EnerOk = true
   }
+  else if (array2[j] === "Marzo") {
+    MarzOk = true
+  }
+  else if (array2[j] === "Noviembre") {
+    NovOk = true;
+  }
+  j++
 }
+}
+if (EnerOk === false || MarzOk === false || NovOk === false) {
+  return "No se encontraron los meses pedidos";
+} else {return array2}
 
-
+}
 function mayorACien(array) {
   //La función recibe un array con enteros entre 0 y 200. Recorrer el array y guardar en un nuevo array sólo los
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
@@ -205,15 +220,21 @@ function breakStatement(numero) {
   //devolver: "Se interrumpió la ejecución"
   //Pista: usá el statement 'break'
   // Tu código:
-  let i = 0;
   let array = []
-  do {
-    i= i + 1;
+  i = 0
+  for (; i < 10; i++) {
     numero = numero + 2;
-  array.push (numero);}
-    while (i < 10);
-    if (numero === i) return "Se interrumpió la ejecución";
-    if (numero !== i) {return array;}
+    if (numero === i) {
+      break;}
+      else {
+        array.push (numero);
+      }
+    }
+if (i !== numero){
+  return array
+} else {
+  return "Se interrumpió la ejecución"
+}
 }
 
 
@@ -226,12 +247,14 @@ function continueStatement(numero) {
   // Tu código:
 let i = 0
 let array = []
-do {
-  i = i + 1;
-  numero = numero + 2;
-  array.push (numero);
-  if (i === 5) {continue;}
-} while (i <10);
+for (; i < 10; i++) {
+  if (i === 5) {
+    continue;
+  } else {
+    numero = numero + 2;
+    array.push (numero);
+  }
+}
 return array
 }
 
